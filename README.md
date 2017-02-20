@@ -20,6 +20,7 @@ NameNode that will fetch the recent FSimage(say f7) and it will get the most rec
  QN 3 Explain what is HDFS federation
  HADOOP  FEDERATION 
 In Hadoop 1.x  version there is only one name node which has a memory of 64 gB which could maintain  a cluster of 4000  data nodes.With increase in Data generation we are now running towards a scenario where say 10,000 data nodes may be required.SO  MORE MEMORY in NAMENODE is required and the SCALE UP OF A SINGLE NAME NODE ABOVE 64 GB but these results in overhead cost.So in Hadoop 2.x we have a feature called FEDERATION where instead of a single name node set(i.e active name node,passive name node and secondary name node ) there are Multiple name node set(say 3) such that each name node maintains the METADATA of each department separately(say one name node takes care of marketing data alone and other name node takes care of finance  data alone) but all the name nodes can access all DATA NODES but they will only look at related information(ie MARKETING NAME NODE TAKES METADATA ABOUT ONLY MARKEETING  AND FINANCE NAME NODE TAKES METADATA ABOUT ONLY FINANCE) 
+
 QN 4 The four files that need to be configured explicitly while setting up a single node hadoop cluster are:
 
 Core-site.xml
